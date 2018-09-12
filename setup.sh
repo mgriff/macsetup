@@ -10,7 +10,7 @@ copy_setup_file ()
 	    echo "Warning: $FILE already exists, please merge files manually."
     else
 	    echo "Copying $FILE"
-        cp $FILENAME $HOME/.
+        cp $FILENAME $FILE
     fi
 }
 

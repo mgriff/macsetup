@@ -1,0 +1,90 @@
+
+set nocompatible          " Use Vim defaults
+set bs=2                  " allow backspacing over everything in insert mode
+set ruler                 " show the cursor position all the time
+set history=50            " keep 50 lines of command line history
+set title                 " show filename in menu
+set ignorecase            " ignore case for searches
+set smartcase             " small case will search case independent, mixed case
+                          " will search exact (has to be used with ignorecase)
+
+"set showmatch             " hilight matching brackets
+let g:loaded_matchparen= 1 
+set expandtab             " enter spaces when you hit tab
+set tabstop=4             " use 4 spaces for tabs
+set shiftwidth=4          " use 4 spaces for << and >>
+
+
+
+set background=dark       " use colourscheme for dark background
+set hlsearch              " hilight search matches
+set incsearch             " use incremental search
+
+"set linebreak            " wrap lines at sensible (eg word) boundaries
+"set autoindent           " autoindent for new lines (aka :set ai)
+                          " note with this on, you need to 'set paste' before pasting
+"set smartindent          " autoindent for new lines (aka :set ai)
+                          " even better than autoindent; deindents '#' and so on
+
+
+":set scrolljump=3        " (sj) # lines to jump when scrolling off bottom/top
+:set scrolloff=4          " (so) # always keep lines showing when scrolling
+
+set vb t_vb=              " do NO bells at all
+
+" optional - if we don't want folding in diff
+"if &diff
+":set foldmethod=manual
+"endif
+
+
+syntax on
+
+
+
+
+
+" colours for hlsearch and incsearch
+:hi Search ctermfg=DarkBlue ctermbg=Black
+:hi IncSearch ctermfg=DarkBlue ctermbg=Black
+
+" colours for diff
+:hi DiffAdd ctermbg=Black ctermfg=Green
+:hi DiffDelete ctermbg=Black ctermfg=Red
+:hi DiffText ctermbg=Black ctermfg=Green
+:hi DiffChange ctermbg=Black ctermfg=Yellow
+
+" colours for the ctrl-n autocomplete popup
+:hi Pmenu ctermbg=grey ctermfg=black
+:hi PmenuSel ctermbg=yellow ctermfg=black
+
+" colours for the match highliging
+:highlight red ctermfg=red
+:highlight yellow ctermfg=yellow
+:highlight blue ctermfg=blue
+:highlight green ctermfg=green
+:highlight cyan ctermfg=darkcyan
+:highlight magenta ctermfg=magenta
+
+" colours for tabline when using tabs
+:hi TabLineFill ctermfg=black
+:hi TabLineSel ctermfg=yellow
+:hi TabLine ctermfg=none
+
+
+
+
+" good colours for syntax highlighting
+:hi Comment  ctermfg=LightRed
+:hi Constant ctermfg=Yellow
+:hi Statement ctermfg=None
+:hi PreProc ctermfg=Green
+:hi Special ctermfg=DarkRed
+:hi Identifier ctermfg=Green
+:hi Type ctermfg=White
+
+
+
+
+set viminfo='20,\"50    " read/write a .viminfo file, don't store more
+

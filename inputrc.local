@@ -1,0 +1,14 @@
+set completion-ignore-case on
+set mark-symlinked-directories on 
+set show-all-if-ambiguous on 
+set visible-stats on 
+set expand-tilde on 
+set keymap vi 
+set bell-style none
+set meta-flag on
+set convert-meta off
+set output-meta on
+
+
+"\e[5C": forward-word           # make ctrl-arrow skip words
+"\e[5D": backward-word          # make ctrl-arrow skip words

@@ -1,0 +1,29 @@
+#### START OF DEFAULT SETTINGS ####
+
+#SETS THE PROMPT COLOUR
+USER_COL="01;33"; PATH_COL="01;32"     # yellow = 3, green = 2, white = 7, blue = 4, purple = 5, cyan = 6
+HOST_COL="01;37"       # yellow = 3, green = 2, white = 7, blue = 4, purple = 5, cyan = 6
+export PS1="\n\[\e[${USER_COL}m\]\u @ \[\e[${HOST_COL}m\]\h > \[\e[${PATH_COL}m\]\w/\[\e[0m\]\n-> "
+unset HOST_COL PATH_COL USER_COL
+
+#SETS THE PROMPT FOR WHEN A COMMAND SPANS A NUMBER OF LINES
+export PS2=" > " 
+
+#LS COLOURS AND DEFAULT FLAGS
+export LSCOLORS=cxexcxdxbxfxfxbxbxcxcx
+alias ls='ls -lhFGv'
+
+#HISTORY SETTINGS
+export IGNOREEOF=2   #Ignore ctrl-d 2 before exiting 
+export HISTIGNORE="&:ls:exit"  #dont store these commands
+export HISTCONTROL=ignoreboth  #dont store duplicate commands or commands starting with a space
+
+#PROMPT IF A FILE WILL BE OVERRIDDEN
+alias mv='mv -i'
+alias rm='rm -i'
+alias cp='cp -i'
+
+#SETUP GREP COLOUR FLAG (WHILE CHECKING IT EXISTS FIRST)
+echo "a" | grep --colour a >/dev/null 2>&1 && alias grep='grep --colour'
+
+#### END OF DEFAULT SETTINGS ####

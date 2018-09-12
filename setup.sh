@@ -19,9 +19,5 @@ copy_setup_file bash_profile.local $HOME/.bash_profile
 copy_setup_file vimrc.local $HOME/.vimrc
 copy_setup_file inputrc.local $HOME/.inputrc
 
-#copy the terminal settings
-echo "Backing up the current Terminal settings to $HOME/Library/Preferences/com.apple.Terminal.plist.bck"
-mv $HOME/Library/Preferences/com.apple.Terminal.plist $HOME/Library/Preferences/com.apple.Terminal.plist.bck
-copy_setup_file com.apple.Terminal.plist $HOME/Library/Preferences/com.apple.Terminal.plist
 echo "finished"
 

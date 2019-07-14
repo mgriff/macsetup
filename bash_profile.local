@@ -26,4 +26,7 @@ alias cp='cp -i'
 #SETUP GREP COLOUR FLAG (WHILE CHECKING IT EXISTS FIRST)
 echo "a" | grep --colour a >/dev/null 2>&1 && alias grep='grep --colour'
 
+#ALIAS FOR USEFUL GIT COMMANDS
+alias git-unpushed='git log --branches --not --remotes --no-walk --decorate --oneline' #checks all local braches for unpushed changes
+
 #### END OF DEFAULT SETTINGS ####
